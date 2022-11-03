@@ -31,22 +31,22 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="53.0" layoutX="50.0" layoutY="37.0" stroke="BLACK" strokeType="INSIDE" width="4.0" />
             <ImageView fitHeight="53.0" fitWidth="96.0" layoutX="-23.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Downloads/Arizona-State-Sun-Devils-logo-768x432.png" />
+                  <Image url="@/img/asu_logo.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="110.0" fitWidth="110.0" layoutX="12.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Downloads/Pepperoni-Pizza.jpeg" />
+                  <Image url="@/img/pepperoni.jpeg" />
                </image>
             </ImageView>
             <ImageView fitHeight="110.0" fitWidth="110.0" layoutX="14.0" layoutY="288.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Downloads/veggie-deluxe-pizza-5-300x300.jpeg" />
+                  <Image url="@/img/veggie.jpeg" />
                </image>
             </ImageView>
             <ImageView fitHeight="110.0" fitWidth="110.0" layoutX="12.0" layoutY="414.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Downloads/cheese.jpeg" />
+                  <Image url="@/img/cheese.jpeg" />
                </image>
             </ImageView>
             <Line endX="181.65924072265625" endY="-2.288818359375E-5" layoutX="112.0" layoutY="107.0" startX="-100.0" />
@@ -138,7 +138,7 @@
             <Hyperlink layoutX="52.0" layoutY="10.0" text="https://www.sundevilpizza.com/" />
             <ImageView fitHeight="43.0" fitWidth="42.0" layoutX="6.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../Downloads/arrow-removebg-preview.png" />
+                  <Image url="@/img/arrow.png" />
                </image>
             </ImageView>
             <Text layoutX="413.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sun Devil Pizza" textAlignment="CENTER" wrappingWidth="72.07160186767578">
@@ -148,7 +148,7 @@
             </Text>
             <ImageView fitHeight="32.0" fitWidth="36.0" layoutX="811.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" style="-fx-image: white;">
                <image>
-                  <Image url="@../../../../Downloads/Shopping-Cart-PNG-Image-72455.png" />
+                  <Image url="@/img/shopping_cart.png" />
                </image>
             </ImageView>
             <TextField layoutX="645.0" layoutY="365.0" prefHeight="26.0" prefWidth="185.0" style="-fx-background-color: #e4e4e4;">
