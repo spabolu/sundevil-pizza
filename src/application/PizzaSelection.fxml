@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.RadioButton?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleGroup?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
-
-<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19"
+            fx:controller="application.PizzaSelectionController">
    <right>
       <AnchorPane prefHeight="532.0" prefWidth="881.0" BorderPane.alignment="CENTER">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6f6e6e" height="34.0" stroke="BLACK" strokeType="INSIDE" width="881.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="17.0" layoutX="53.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="821.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d0909" height="58.0" layoutY="34.0" stroke="BLACK" strokeType="INSIDE" width="881.0" />
-            <Text fill="WHITE" layoutX="62.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sun Devil Pizza" wrappingWidth="236.91650390625">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6f6e6e" height="34.0" stroke="BLACK" strokeType="INSIDE"
+                       width="881.0"/>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="17.0" layoutX="53.0" layoutY="14.0"
+                       stroke="BLACK" strokeType="INSIDE" width="821.0"/>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d0909" height="58.0" layoutY="34.0" stroke="BLACK"
+                       strokeType="INSIDE" width="881.0"/>
+            <Text fill="WHITE" layoutX="62.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                  text="Sun Devil Pizza" wrappingWidth="236.91650390625">
                <font>
-                  <Font name="Charter Roman" size="35.0" />
+                  <Font name="Charter Roman" size="35.0"/>
                </font>
             </Text>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="53.0" layoutX="50.0" layoutY="37.0" stroke="BLACK" strokeType="INSIDE" width="4.0" />

@@ -11,7 +11,7 @@ enum Status {
 public class Order {
     private int ID;
     private Status status;
-    private Pizza pizza;
+    private final Pizza pizza;
 
     double pickUpTime;
     double price;

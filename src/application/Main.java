@@ -1,23 +1,23 @@
 package application;
-	
-import javafx.application.Application;
-import javafx.stage.Stage;
-import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
-import javafx.fxml.FXMLLoader;
 
-import java.util.Objects;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class Main extends Application {
 	@Override
-	public void start(Stage primaryStage) {
+	public void start(Stage stage) {
 		try {
-			BorderPane root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Sample.fxml")));
-			Scene scene = new Scene(root,850,600);
-			scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("application.css")).toExternalForm());
-			primaryStage.setScene(scene);
-			primaryStage.show();
-		} catch(Exception e) {
+			Parent root = FXMLLoader.load(getClass().getResource("ChefTrack.fxml")); // change the `.fxml` file here to load your scene
+			Scene scene = new Scene(root, 1280, 720); // width: 1280 and height: 720
+			stage.setResizable(false); // disables users to resize the window which can make the components get wonky
+//			scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("application.css")).toExternalForm());
+			stage.setScene(scene);
+			stage.show();
+
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
