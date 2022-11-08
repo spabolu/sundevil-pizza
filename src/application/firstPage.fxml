@@ -11,7 +11,9 @@
 <?import javafx.scene.text.Text?>
 
 
-<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane xmlns="http://javafx.com/javafx/19" 
+fx:controller = "application.firstPageController"
+xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <SplitPane dividerPositions="0.5008361204013378" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
         <items>
@@ -22,26 +24,26 @@
                         <Font name="Impact" size="24.0" />
                      </font>
                   </Text>
-                  <PasswordField layoutX="69.0" layoutY="221.0" promptText="Enter 10-digit ASU ID">
+                  <PasswordField fx:id="studentIDEntered" layoutX="69.0" layoutY="221.0" promptText="Enter 10-digit ASU ID">
                      <font>
                         <Font name="American Typewriter" size="13.0" />
                      </font>
                   </PasswordField>
-                  <Button layoutX="122.0" layoutY="288.0" mnemonicParsing="false" text="Next" />
-                  <TextField layoutX="77.0" layoutY="172.0" />
+                  <Button fx:id="studentButton" layoutX="122.0" layoutY="288.0" mnemonicParsing="false" text="Next" />
+                  <TextField fx:id="studentName" layoutX="77.0" layoutY="172.0" />
                   <Text layoutX="77.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <PasswordField layoutX="71.0" layoutY="221.0" promptText="Enter 10-digit chef ID" />
-                  <Button layoutX="121.0" layoutY="290.0" mnemonicParsing="false" text="Next" />
+                  <PasswordField fx:id="chefIDEntered" layoutX="71.0" layoutY="221.0" promptText="Enter 10-digit chef ID" />
+                  <Button fx:id="chefButton" layoutX="121.0" layoutY="290.0" mnemonicParsing="false" text="Next" />
                   <Text layoutX="99.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chef Login" AnchorPane.rightAnchor="93.73046875">
                      <font>
                         <Font name="Impact" size="24.0" />
                      </font>
                   </Text>
-                  <TextField layoutX="77.0" layoutY="172.0" />
+                  <TextField fx:id="chefName" layoutX="77.0" layoutY="172.0" />
                   <Text layoutX="82.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
                </children>
             </AnchorPane>
