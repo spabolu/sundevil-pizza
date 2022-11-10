@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import com.gluonhq.charm.glisten.control.TextField?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-
-<BorderPane xmlns="http://javafx.com/javafx/19" 
-fx:controller = "application.firstPageController"
-xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19"  fx:controller="application.SceneController">
    <center>
       <SplitPane dividerPositions="0.5008361204013378" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
         <items>
@@ -29,15 +21,15 @@ xmlns:fx="http://javafx.com/fxml/1">
                         <Font name="American Typewriter" size="13.0" />
                      </font>
                   </PasswordField>
-                  <Button fx:id="studentButton" layoutX="122.0" layoutY="288.0" mnemonicParsing="false" text="Next" />
-                  <TextField fx:id="studentName" layoutX="77.0" layoutY="172.0" />
+                  <Button layoutX="122.0" layoutY="288.0" mnemonicParsing="false" onAction="#switchToScene1" text="Next" />
+                  <TextField layoutX="77.0" layoutY="172.0" />
                   <Text layoutX="77.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <PasswordField fx:id="chefIDEntered" layoutX="71.0" layoutY="221.0" promptText="Enter 10-digit chef ID" />
-                  <Button fx:id="chefButton" layoutX="121.0" layoutY="290.0" mnemonicParsing="false" text="Next" />
+                  <PasswordField layoutX="71.0" layoutY="221.0" promptText="Enter 10-digit chef ID" />
+                  <Button layoutX="121.0" layoutY="290.0" mnemonicParsing="false" onAction="#switchToScene2" text="Next" />
                   <Text layoutX="99.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chef Login" AnchorPane.rightAnchor="93.73046875">
                      <font>
                         <Font name="Impact" size="24.0" />
