@@ -96,7 +96,6 @@ public class firstPageController implements Initializable{
                 checkVal  = true;
             }
         }
-        System.out.println("The value after the for loop: " + checkVal);
         
         //if the ID is authenticated move to pizza ordering screen
         if(checkVal){
@@ -151,7 +150,6 @@ public class firstPageController implements Initializable{
                 checkVal  = true;
             }
         }
-        System.out.println("The value after the for loop: " + checkVal);
         
         //if the ID is authenticated move to pizza ordering screen
         if(checkVal){
