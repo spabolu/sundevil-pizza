@@ -56,7 +56,8 @@ public class firstPageController implements Initializable{
     //chef ID array
     int[] chefIdDatabase = {1113574923, 1119357623, 1117499023, 1112274923};
 
-
+    public String sName;
+    public String cName;
     
     //****************************************************************************
     //if the student side "next" button is clicked
@@ -67,7 +68,7 @@ public class firstPageController implements Initializable{
 
         boolean checkVal = false; //
         boolean containsChar = false; //set to true if ID contains characters
-        String sName = studentName.getText();
+        sName = studentName.getText();
         int studentIdAsNum = 0;
         String studentIDString = studentIDEntered.getText();
 
@@ -123,7 +124,7 @@ public class firstPageController implements Initializable{
 
         boolean checkVal = false; //
         boolean containsChar = false; //set to true if ID contains characters
-        String cName = chefName.getText();
+        cName = chefName.getText();
         int chefIdAsNum = 0;
         String chefIDString = chefIDEntered.getText();
 
