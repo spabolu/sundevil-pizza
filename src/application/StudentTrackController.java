@@ -39,13 +39,6 @@ public class StudentTrackController implements Initializable {
     private Parent root;
 
 
-<<<<<<< Updated upstream
-=======
-
-
-
->>>>>>> Stashed changes
-    //  TODO: remove this method once done debugging at the end
     public void switchToChef(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("ChefTrack.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

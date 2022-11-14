@@ -17,11 +17,7 @@ enum Status {
 public class Order {
     private int ID;
     private Status status;
-<<<<<<< Updated upstream
     public Pizza pizza;
-=======
-    Pizza pizza;
->>>>>>> Stashed changes
 
     double pickUpTime;
     double price;
@@ -30,7 +26,7 @@ public class Order {
     /**
      * Instantiates a new Order.
      */
-    public Order() {                            //NULL constructor
+    public Order() {
         this.ID = -1;
         this.status = Status.NULL;
         this.pickUpTime = 0.0;
