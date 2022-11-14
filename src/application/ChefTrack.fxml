@@ -1,118 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.*?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" disable="true" maxHeight="-Infinity" maxWidth="-Infinity"
-            minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0"
-            xmlns="http://javafx.com/javafx/19">
-   <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#404040" height="60.0" layoutX="0" layoutY="0" stroke="BLACK"
-                 strokeType="INSIDE" width="1280.0"/>
-      <Text fill="WHITE" layoutX="562.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sun Devil Pizza">
-         <font>
-            <Font name="Inter Bold" size="30.0"/>
-         </font>
-      </Text>
-      <ImageView fitHeight="43.0" fitWidth="50.0" layoutX="519.0" layoutY="9.0" pickOnBounds="true"
-                 preserveRatio="true">
-         <image>
-            <Image url="@../img/pizza_logo.png"/>
-         </image>
-      </ImageView>
-      <Text layoutX="519.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Orders"
-            textAlignment="CENTER">
-         <font>
-            <Font name="Inter SemiBold" size="36.0"/>
-         </font>
-      </Text>
-      <ProgressBar layoutX="166.0" layoutY="184.0" prefHeight="50.0" prefWidth="930.0" progress="0.3"
-                   AnchorPane.bottomAnchor="486.0"/>
-      <Text layoutX="166.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0"
-            text="Order: #123 - Cheese Pizza w/ Mushroom, Olives">
-         <font>
-            <Font name="Inter Regular" size="13.0"/>
-         </font>
-      </Text>
-      <Text layoutX="920.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saketh Pabolu (1221201098)"
-            textAlignment="RIGHT">
-         <font>
-            <Font name="Inter Regular" size="13.0"/>
-         </font>
-      </Text>
-      <Button layoutX="166.0" layoutY="238.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="69.0"
-              text="Progress">
-         <font>
-            <Font name="Inter Regular" size="11.0"/>
-         </font>
-      </Button>
-      <ProgressBar layoutX="166.0" layoutY="304.0" prefHeight="50.0" prefWidth="930.0" progress="0.5"/>
-      <Text layoutX="166.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0"
-            text="Order: #123 - Cheese Pizza w/ Mushroom, Olives">
-         <font>
-            <Font name="Inter Regular" size="13.0"/>
-         </font>
-      </Text>
-      <Text layoutX="920.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saketh Pabolu (1221201098)"
-            textAlignment="RIGHT">
-         <font>
-            <Font name="Inter Regular" size="13.0"/>
-         </font>
-      </Text>
-      <Button layoutX="166.0" layoutY="358.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="69.0"
-              text="Progress">
-         <font>
-            <Font name="Inter Regular" size="11.0"/>
-         </font>
-      </Button>
-      <ProgressBar layoutX="166.0" layoutY="424.0" prefHeight="50.0" prefWidth="930.0" progress="0.5"/>
-      <Text layoutX="166.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0"
-            text="Order: #123 - Cheese Pizza w/ Mushroom, Olives">
-         <font>
-            <Font name="Inter Regular" size="13.0"/>
-         </font>
-      </Text>
-      <Text layoutX="920.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saketh Pabolu (1221201098)"
-            textAlignment="RIGHT">
-         <font>
-            <Font name="Inter Regular" size="13.0"/>
-         </font>
-      </Text>
-      <Button layoutX="166.0" layoutY="478.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="69.0"
-              text="Progress">
-         <font>
-            <Font name="Inter Regular" size="11.0"/>
-         </font>
-      </Button>
-      <ProgressBar layoutX="166.0" layoutY="534.0" prefHeight="50.0" prefWidth="930.0" progress="1.0"/>
-      <Text layoutX="166.0" layoutY="531.0" strokeType="OUTSIDE" strokeWidth="0.0"
-            text="Order: #123 - Cheese Pizza w/ Mushroom, Olives">
-         <font>
-            <Font name="Inter Regular" size="13.0"/>
-         </font>
-      </Text>
-      <Text layoutX="920.0" layoutY="531.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saketh Pabolu (1221201098)"
-            textAlignment="RIGHT">
-         <font>
-            <Font name="Inter Regular" size="13.0"/>
-         </font>
-      </Text>
-      <Button layoutX="166.0" layoutY="588.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="69.0"
-              text="Progress">
-         <font>
-            <Font name="Inter Regular" size="11.0"/>
-         </font>
-      </Button>
-      <Line endX="100.0" layoutX="651.0" layoutY="663.0" startX="-100.0" stroke="#343434"/>
-      <Text fill="#343434" layoutX="587.0" layoutY="687.0" strokeType="OUTSIDE" strokeWidth="0.0"
-            text="Search Previous Order?">
-         <font>
-            <Font name="Inter Regular" size="12.0"/>
-         </font>
-      </Text>
-   </children>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0"
+            prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="application.ChefTrackController">
+    <children>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#404040" height="60.0" layoutX="0" layoutY="0" stroke="BLACK"
+                   strokeType="INSIDE" width="1280.0"/>
+        <Text fill="WHITE" layoutX="562.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sun Devil Pizza">
+            <font>
+                <Font name="Inter Bold" size="30.0"/>
+            </font>
+        </Text>
+        <ImageView fitHeight="43.0" fitWidth="50.0" layoutX="519.0" layoutY="9.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../img/pizza_logo.png"/>
+            </image>
+        </ImageView>
+        <Text layoutX="519.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Orders"
+              textAlignment="CENTER">
+            <font>
+                <Font name="Inter SemiBold" size="36.0"/>
+            </font>
+        </Text>
+        <ProgressBar fx:id="progressbar_one" layoutX="166.0" layoutY="184.0" prefHeight="50.0" prefWidth="930.0"
+                     progress="0.0" AnchorPane.bottomAnchor="486.0"/>
+        <Text layoutX="166.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Order: #123 - Cheese Pizza w/ Mushroom, Olives">
+            <font>
+                <Font name="Inter Regular" size="13.0"/>
+            </font>
+        </Text>
+        <Text layoutX="920.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saketh Pabolu (1221201098)"
+              textAlignment="RIGHT">
+            <font>
+                <Font name="Inter Regular" size="13.0"/>
+            </font>
+        </Text>
+        <Button fx:id="button_one" layoutX="166.0" layoutY="238.0" mnemonicParsing="false" onAction="#increaseProgress"
+                prefHeight="21.0" prefWidth="69.0" text="Progress">
+            <font>
+                <Font name="Inter Regular" size="11.0"/>
+            </font>
+        </Button>
+        <ProgressBar fx:id="progressbar_two" layoutX="166.0" layoutY="304.0" prefHeight="50.0" prefWidth="930.0"
+                     progress="0.0"/>
+        <Text layoutX="166.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Order: #124 - Vegetable Pizza w/ Onions">
+            <font>
+                <Font name="Inter Regular" size="13.0"/>
+            </font>
+        </Text>
+        <Text layoutX="920.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saketh Pabolu (1221201098)"
+              textAlignment="RIGHT">
+            <font>
+                <Font name="Inter Regular" size="13.0"/>
+            </font>
+        </Text>
+        <Button fx:id="button_two" layoutX="166.0" layoutY="358.0" mnemonicParsing="false" onAction="#increaseProgress"
+                prefHeight="21.0" prefWidth="69.0" text="Progress">
+            <font>
+                <Font name="Inter Regular" size="11.0"/>
+            </font>
+        </Button>
+        <ProgressBar fx:id="progressbar_three" layoutX="166.0" layoutY="424.0" prefHeight="50.0" prefWidth="930.0"
+                     progress="0.0"/>
+        <Text layoutX="166.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Order: #125 - Pepperoni Pizza">
+            <font>
+                <Font name="Inter Regular" size="13.0"/>
+            </font>
+        </Text>
+        <Text layoutX="890.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Neha Balamurugan (1221208893)" textAlignment="RIGHT">
+            <font>
+                <Font name="Inter Regular" size="13.0"/>
+            </font>
+        </Text>
+        <Button fx:id="button_three" layoutX="166.0" layoutY="478.0" mnemonicParsing="false"
+                onAction="#increaseProgress" prefHeight="21.0" prefWidth="69.0" text="Progress">
+            <font>
+                <Font name="Inter Regular" size="11.0"/>
+            </font>
+        </Button>
+        <ProgressBar fx:id="progressbar_four" layoutX="166.0" layoutY="534.0" prefHeight="50.0" prefWidth="930.0"
+                     progress="0.0"/>
+        <Text layoutX="166.0" layoutY="531.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Order: #126 - Pepperoni Pizza">
+            <font>
+                <Font name="Inter Regular" size="13.0"/>
+            </font>
+        </Text>
+        <Text layoutX="917.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jason Younan (1225608893)"
+              textAlignment="RIGHT">
+            <font>
+                <Font name="Inter Regular" size="13.0"/>
+            </font>
+        </Text>
+        <Button fx:id="button_four" layoutX="166.0" layoutY="588.0" mnemonicParsing="false" onAction="#increaseProgress"
+                prefHeight="21.0" prefWidth="69.0" text="Progress">
+            <font>
+                <Font name="Inter Regular" size="11.0"/>
+            </font>
+        </Button>
+        <Line endX="100.0" layoutX="651.0" layoutY="663.0" startX="-100.0" stroke="#343434"/>
+        <Text fill="#343434" layoutX="587.0" layoutY="687.0" strokeType="OUTSIDE" strokeWidth="0.0"
+              text="Search Previous Order?">
+            <font>
+                <Font name="Inter Regular" size="12.0"/>
+            </font>
+        </Text>
+        <Button fx:id="switchButton" layoutX="560.0" layoutY="632.0" mnemonicParsing="false" onAction="#switchToStudent"
+                text="Switch to Student Track Scene"/>
+    </children>
 </AnchorPane>

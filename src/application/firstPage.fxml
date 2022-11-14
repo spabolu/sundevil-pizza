@@ -1,57 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.firstPageController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.firstPageController">
    <center>
-      <SplitPane dividerPositions="0.5008361204013378" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+      <SplitPane dividerPositions="0.5008361204013378" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="1280.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="404.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Text layoutX="72.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Login">
+                  <PasswordField fx:id="chefIDEntered" layoutX="250.0" layoutY="288.0" promptText="Enter 10-digit chef ID" />
+                  <Button fx:id="button" layoutX="308.0" layoutY="353.0" mnemonicParsing="false" onAction="#goToChef" text="Next" />
+                  <Text layoutX="320.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chef Login" AnchorPane.rightAnchor="256.73046875">
                      <font>
                         <Font name="Impact" size="24.0" />
                      </font>
                   </Text>
-                  <PasswordField fx:id="studentIDEntered" layoutX="77.0" layoutY="221.0" promptText="Enter 10-digit ASU ID">
+                  <TextField fx:id="chefName" layoutX="250.0" layoutY="225.0" />
+                  <Text layoutX="234.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="404.0">
+               <children>
+                  <Text layoutX="261.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Login">
+                     <font>
+                        <Font name="Impact" size="24.0" />
+                     </font>
+                  </Text>
+                  <PasswordField fx:id="studentIDEntered" layoutX="237.0" layoutY="288.0" promptText="Enter 10-digit ASU ID">
                      <font>
                         <Font name="American Typewriter" size="13.0" />
                      </font>
                   </PasswordField>
-                  <Button fx:id="button1" layoutX="122.0" layoutY="288.0" mnemonicParsing="false" onAction="#goToStudent" text="Next" />
-                  <TextField fx:id="studentName" layoutX="77.0" layoutY="172.0" />
-                  <Text layoutX="77.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
-               </children>
-            </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-               <children>
-                  <PasswordField fx:id="chefIDEntered" layoutX="77.0" layoutY="221.0" promptText="Enter 10-digit chef ID" />
-                  <Button fx:id="button" layoutX="121.0" layoutY="290.0" mnemonicParsing="false" onAction="#goToChef" text="Next" />
-                  <Text layoutX="99.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chef Login" AnchorPane.rightAnchor="93.73046875">
-                     <font>
-                        <Font name="Impact" size="24.0" />
-                     </font>
-                  </Text>
-                  <TextField fx:id="chefName" layoutX="77.0" layoutY="172.0" />
-                  <Text layoutX="82.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                  <Button fx:id="button1" layoutX="295.0" layoutY="353.0" mnemonicParsing="false" onAction="#goToStudent" text="Next" />
+                  <TextField fx:id="studentName" layoutX="237.0" layoutY="225.0" />
+                  <Text layoutX="214.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
                </children>
             </AnchorPane>
         </items>
       </SplitPane>
    </center>
    <top>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="50.0" stroke="BLACK" strokeType="INSIDE" width="881.0" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="50.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#404040" height="50.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
+            <Text fill="WHITE" layoutX="586.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sun Devil Pizza">
+               <font>
+                  <Font name="Inter Bold" size="30.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="50.0" fitWidth="43.0" layoutX="534.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/pizza_logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </top>
-   <bottom>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="15.0" stroke="BLACK" strokeType="INSIDE" width="881.0" BorderPane.alignment="CENTER" />
-   </bottom>
 </BorderPane>
+

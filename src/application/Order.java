@@ -1,5 +1,8 @@
 package application;
 
+/**
+ * Order status represented as an enum.
+ */
 enum Status {
     NULL,
     ACCEPTED,
@@ -8,16 +11,22 @@ enum Status {
     READY
 }
 
+/**
+ * The Order Class.
+ */
 public class Order {
     private int ID;
     private Status status;
-    private final Pizza pizza;
+    public Pizza pizza;
 
     double pickUpTime;
     double price;
 
 
-    public Order() {                            //NULL constructor
+    /**
+     * Instantiates a new Order.
+     */
+    public Order() {
         this.ID = -1;
         this.status = Status.NULL;
         this.pickUpTime = 0.0;
@@ -25,6 +34,14 @@ public class Order {
         this.price = 0.0;
     }
 
+    /**
+     * Instantiates a new Order.
+     *
+     * @param ID         the id
+     * @param pizza      the pizza
+     * @param status     the status
+     * @param pickUpTime the pick up time
+     */
     public Order(int ID, Pizza pizza, Status status, double pickUpTime) {
         this.ID = ID;
         this.status = status;
@@ -33,24 +50,49 @@ public class Order {
         this.price = this.pizza.calculatePrice();
     }
 
-    //Getters and Setters - Lines 37-49
+    /**
+     * Get status.
+     *
+     * @return the status
+     */
     public Status getStatus(){
         return this.status;
     }
+
+    /**
+     * Set status.
+     *
+     * @param newStatus the new status
+     */
     public void setStatus(Status newStatus){
         this.status = newStatus;
     }
 
+    /**
+     * Get id int.
+     *
+     * @return the int
+     */
     public int getID(){
         return this.ID;
     }
+
+    /**
+     * Set id.
+     *
+     * @param newID the new id
+     */
     public void setID(int newID){
         this.ID = newID;
     }
 
-
-
-    public Status updateStatus(Status status){
+    /**
+     * Update status.
+     *
+     * @param status the status
+     * @return the status
+     */
+    public static Status updateStatus(Status status){
         switch(status) {
             case NULL:
                 System.out.println("No order to update");
