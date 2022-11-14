@@ -58,11 +58,6 @@ public class ChefTrackController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
     }
 
-    Status pizza_one = Status.ACCEPTED;
-    Status pizza_two = Status.ACCEPTED;
-    Status pizza_three = Status.ACCEPTED;
-    Status pizza_four = Status.ACCEPTED;
-
     static double percentStatus(Status pizzaStatus) {
         switch (pizzaStatus) {
             case ACCEPTED:
@@ -82,17 +77,17 @@ public class ChefTrackController implements Initializable {
     public void increaseProgress(ActionEvent event) {
         Button sourceButton = (Button) event.getSource();
         if (sourceButton.equals(button_one)) {
-            progressbar_one.setProgress(percentStatus(pizza_one));
-            pizza_one = Order.updateStatus(pizza_one);
+            progressbar_one.setProgress(percentStatus(Main.orderList.get(0).getStatus()));
+            Main.orderList.get(0).setStatus(Order.updateStatus(Main.orderList.get(0).getStatus()));
         } else if (sourceButton.equals(button_two)) {
-            progressbar_two.setProgress(percentStatus(pizza_two));
-            pizza_two = Order.updateStatus(pizza_two);
+            progressbar_two.setProgress(percentStatus(Main.orderList.get(1).getStatus()));
+            Main.orderList.get(1).setStatus(Order.updateStatus(Main.orderList.get(1).getStatus()));
         } else if (sourceButton.equals(button_three)) {
-            progressbar_three.setProgress(percentStatus(pizza_three));
-            pizza_three = Order.updateStatus(pizza_three);
+            progressbar_three.setProgress(percentStatus(Main.orderList.get(2).getStatus()));
+            Main.orderList.get(2).setStatus(Order.updateStatus(Main.orderList.get(2).getStatus()));
         } else if (sourceButton.equals(button_four)) {
-            progressbar_four.setProgress(percentStatus(pizza_four));
-            pizza_four = Order.updateStatus(pizza_four);
+            progressbar_four.setProgress(percentStatus(Main.orderList.get(3).getStatus()));
+            Main.orderList.get(3).setStatus(Order.updateStatus(Main.orderList.get(3).getStatus()));
         }
 
 //        if (sourceButton.equals(button_one)) {

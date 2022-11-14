@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
 import java.util.ArrayList;
 
 public class Main extends Application {
@@ -13,7 +14,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("pizzaSelection.fxml")); // change the `.fxml` file here to load your scene for testing purposes
+            Parent root = FXMLLoader.load(getClass().getResource("ChefTrack.fxml")); // change the `.fxml` file here to load your scene for testing purposes
             System.out.println(root);// change the `.fxml` file here to load your scene
             stage.setTitle("SunDevil Pizza Kiosk"); // sets the title of the window
             Scene scene = new Scene(root, 1280, 720); // width: 1280 and height: 720
@@ -28,13 +29,19 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-//        ArrayList<BigDecimal> pizzaProgress = new ArrayList<BigDecimal>(); // trying to make a central public array with data but not having any success so far --saketh
-//
-//        // progressbars starting values
-//        pizzaProgress.add(new BigDecimal(String.format("%.2f", 0.0)));
-//        pizzaProgress.add(new BigDecimal(String.format("%.2f", 0.0)));
-//        pizzaProgress.add(new BigDecimal(String.format("%.2f", 0.0)));
-//        pizzaProgress.add(new BigDecimal(String.format("%.2f", 0.0)));
+
+        Pizza cheese1 = new Pizza(Type.CHEESE, true, false, false, false);
+        Order test1 = new Order(1221201098, cheese1, Status.ACCEPTED, 10.00);
+        Pizza cheese2 = new Pizza(Type.CHEESE, true, false, false, false);
+        Order test2 = new Order(1221201098, cheese2, Status.ACCEPTED, 10.00);
+        Pizza cheese3 = new Pizza(Type.CHEESE, true, false, false, false);
+        Order test3 = new Order(1221201098, cheese3, Status.ACCEPTED, 10.00);
+        Pizza cheese4 = new Pizza(Type.CHEESE, true, false, false, false);
+        Order test4 = new Order(1221201098, cheese4, Status.ACCEPTED, 10.00);
+        orderList.add(test1);
+        orderList.add(test2);
+        orderList.add(test3);
+        orderList.add(test4);
 
         launch(args);
     }

@@ -50,7 +50,7 @@ public class firstPageController implements Initializable {
     }
 
     //student ID array - ins
-    static int[] studentIdDatabase = {1223574645, 1223453645, 1223453798, 1223674138};
+    int[] studentIdDatabase = {1223574645, 1223453645, 1223453798, 1223674138};
 
     //chef ID array
     int[] chefIdDatabase = {1113574923, 1119357623, 1117499023, 1112274923};

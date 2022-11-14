@@ -31,7 +31,7 @@ public class Pizza {
     public double calculatePrice(){
         double price = 0.0;
         if(this.type == Type.NULL){
-           return 0.0;
+            return 0.0;
         }
 
         if(this.mush) price += 0.5;
