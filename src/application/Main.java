@@ -10,6 +10,8 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class Main extends Application {
+    public static ArrayList<Order> orderList = new ArrayList<>();
+
     @Override
     public void start(Stage stage) {
         try {

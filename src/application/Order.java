@@ -1,13 +1,19 @@
 package application;
 
+/**
+ * Order status represented as an enum.
+ */
 enum Status {
     NULL,
     ACCEPTED,
     READY_TO_COOK,
     COOKING,
-    READY
+    READY;
 }
 
+/**
+ * The Order Class.
+ */
 public class Order {
     private int ID;
     private Status status;
@@ -17,6 +23,9 @@ public class Order {
     double price;
 
 
+    /**
+     * Instantiates a new Order.
+     */
     public Order() {                            //NULL constructor
         this.ID = -1;
         this.status = Status.NULL;
@@ -25,6 +34,14 @@ public class Order {
         this.price = 0.0;
     }
 
+    /**
+     * Instantiates a new Order.
+     *
+     * @param ID         the id
+     * @param pizza      the pizza
+     * @param status     the status
+     * @param pickUpTime the pick up time
+     */
     public Order(int ID, Pizza pizza, Status status, double pickUpTime) {
         this.ID = ID;
         this.status = status;
@@ -33,23 +50,49 @@ public class Order {
         this.price = this.pizza.calculatePrice();
     }
 
-    //Getters and Setters - Lines 37-49
+    /**
+     * Get status.
+     *
+     * @return the status
+     */
     public Status getStatus(){
         return this.status;
     }
+
+    /**
+     * Set status.
+     *
+     * @param newStatus the new status
+     */
     public void setStatus(Status newStatus){
         this.status = newStatus;
     }
 
+    /**
+     * Get id int.
+     *
+     * @return the int
+     */
     public int getID(){
         return this.ID;
     }
+
+    /**
+     * Set id.
+     *
+     * @param newID the new id
+     */
     public void setID(int newID){
         this.ID = newID;
     }
 
 
-
+    /**
+     * Update status.
+     *
+     * @param status the status
+     * @return the status
+     */
     public Status updateStatus(Status status){
         switch(status) {
             case NULL:
