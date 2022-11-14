@@ -6,9 +6,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.math.BigDecimal;
-import java.util.ArrayList;
-
 public class Main extends Application {
     public static ArrayList<Order> orderList = new ArrayList<>();
 
@@ -30,13 +27,13 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        ArrayList<BigDecimal> pizzaProgress = new ArrayList<BigDecimal>(); // trying to make a central public array but not having any success so far --saketh
-
-        // progressbars starting values
-        pizzaProgress.add(new BigDecimal(String.format("%.2f", 0.0)));
-        pizzaProgress.add(new BigDecimal(String.format("%.2f", 0.0)));
-        pizzaProgress.add(new BigDecimal(String.format("%.2f", 0.0)));
-        pizzaProgress.add(new BigDecimal(String.format("%.2f", 0.0)));
+//        ArrayList<BigDecimal> pizzaProgress = new ArrayList<BigDecimal>(); // trying to make a central public array with data but not having any success so far --saketh
+//
+//        // progressbars starting values
+//        pizzaProgress.add(new BigDecimal(String.format("%.2f", 0.0)));
+//        pizzaProgress.add(new BigDecimal(String.format("%.2f", 0.0)));
+//        pizzaProgress.add(new BigDecimal(String.format("%.2f", 0.0)));
+//        pizzaProgress.add(new BigDecimal(String.format("%.2f", 0.0)));
 
         launch(args);
     }
