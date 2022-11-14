@@ -95,7 +95,7 @@ public class Order {
     public static Status updateStatus(Status status){
         switch(status) {
             case NULL:
-                System.out.println("No order to update");
+                System.out.println("\nLOG: No order to update\n");
                 break;
             case ACCEPTED:
                 status = Status.READY_TO_COOK;
@@ -107,10 +107,10 @@ public class Order {
                 status = Status.READY;
                 break;
             case READY:
-                System.out.println("Order is ready and cannot be updated");
+                System.out.println("\nLOG: Order is ready and cannot be updated\n");
                 break;
             default:
-                System.out.println("Invalid Status");
+                System.out.println("\nLOG: Invalid Status\n");
                 break;
         }
         return status;

@@ -32,19 +32,19 @@ public class Main extends Application {
 
         Pizza cheese1 = new Pizza(Type.CHEESE, true, false, false, false);
         Order test1 = new Order(1221201098, cheese1, Status.ACCEPTED, 10.00);
-        Pizza cheese2 = new Pizza(Type.CHEESE, true, false, false, false);
-        Order test2 = new Order(1221201098, cheese2, Status.ACCEPTED, 10.00);
-        Pizza cheese3 = new Pizza(Type.CHEESE, true, false, false, false);
-        Order test3 = new Order(1221201098, cheese3, Status.ACCEPTED, 10.00);
-        Pizza cheese4 = new Pizza(Type.CHEESE, true, false, false, false);
-        Order test4 = new Order(1221201098, cheese4, Status.ACCEPTED, 10.00);
+//        Pizza cheese2 = new Pizza(Type.CHEESE, true, false, false, false);
+//        Order test2 = new Order(1221201098, cheese2, Status.ACCEPTED, 10.00);
+//        Pizza cheese3 = new Pizza(Type.CHEESE, true, false, false, false);
+//        Order test3 = new Order(1221201098, cheese3, Status.ACCEPTED, 10.00);
+//        Pizza cheese4 = new Pizza(Type.CHEESE, true, false, false, false);
+//        Order test4 = new Order(1221201098, cheese4, Status.ACCEPTED, 10.00);
         orderList.add(test1);
-        orderList.add(test2);
-        orderList.add(test3);
-        orderList.add(test4);
+//        orderList.add(test2);
+//        orderList.add(test3);
+//        orderList.add(test4);
 
-        Order test = new Order(1221201098,new Pizza(Type.CHEESE, true, false, false, false), Status.ACCEPTED, 10.00);
-        orderList.add(test);
+//        Order test = new Order(1221201098,new Pizza(Type.CHEESE, true, false, false, false), Status.ACCEPTED, 10.00);
+//        orderList.add(test);
 
 
         launch(args);

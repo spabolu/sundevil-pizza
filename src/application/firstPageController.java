@@ -68,9 +68,8 @@ public class firstPageController implements Initializable {
         int studentIdAsNum = 0;
         String studentIDString = studentIDEntered.getText();
 
-
-        System.out.println(sName);
-        System.out.println(studentIDString);
+        System.out.println("Student Name: " + sName);
+        System.out.println("Student# " + studentIDString + "\n");
 
         try { //parse the string input from password field to an int
             studentIdAsNum = Integer.parseInt(studentIDString);
@@ -85,14 +84,14 @@ public class firstPageController implements Initializable {
 
         //checking if the entered ID is in the database array
         checkVal = false;
-        System.out.println(checkVal);
+//        System.out.println(checkVal);
         for (int i = 0; i < studentIdDatabase.length; i++) {
 
             if (studentIdDatabase[i] == studentIdAsNum) {
                 checkVal = true;
             }
         }
-        System.out.println("The value after the for loop: " + checkVal);
+//        System.out.println("The value after the for loop: " + checkVal);
 
         //if the ID is authenticated move to pizza ordering screen
         if (checkVal) {

@@ -113,7 +113,7 @@ public class Pizza {
     public String toString(){
         boolean edited = false;
         String returnVal = "";
-        returnVal += this.type.toString();
+        returnVal += this.type.toString() + " ";
         returnVal += "Pizza w/ ";
         if(this.mush){
             edited = true;

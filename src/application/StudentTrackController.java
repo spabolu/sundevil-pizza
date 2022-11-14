@@ -31,24 +31,17 @@ public class StudentTrackController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        label_one.setText(Main.orderList.get(0).pizza.toString());
-    }
+        if (Main.orderList.size() < 1) {
+            label_one.setText("Please Order Something");
+        } else {
+            label_one.setText(Main.orderList.get(0).pizza.toString());
+        }
 
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
-
-
-    public void switchToChef(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("ChefTrack.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-
-//        label_one.setText(Main.orderList.get(0).pizza.toString());
-                label_one.setText("Hello World");
-        progressbar_student_two.setDisable(true);
-        stage.show();
+        if (Main.orderList.size() < 2) {
+            label_two.setText("Please Order Something");
+        } else {
+            label_two.setText(Main.orderList.get(1).pizza.toString());
+        }
     }
 
 }
