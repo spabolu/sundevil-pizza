@@ -7,8 +7,8 @@ enum Type{
 }
 
 public class Pizza {
-    Type type;
-    Boolean mush, olive, onion, cheese;
+    public Type type;
+    public Boolean mush, olive, onion, cheese;
 
     public Pizza(){
         this.type = Type.NULL;
@@ -41,5 +41,35 @@ public class Pizza {
 
         return price;
 
+    }
+
+    public String toString(){
+        boolean edited = false;
+        String returnVal = "";
+        returnVal += this.type.toString();
+        returnVal += "Pizza w/ ";
+        if(this.mush){
+            edited = true;
+            returnVal += "Mushrooms, ";
+        }
+        if(this.cheese){
+            edited = true;
+            returnVal += "Cheese, ";
+        }
+        if(this.onion){
+            edited = true;
+            returnVal += "Onions, ";
+        }
+        if(this.olive){
+            edited = true;
+            returnVal += "Olives, ";
+        }
+        returnVal=returnVal.trim();
+        if(edited){
+            returnVal = returnVal.substring(0, returnVal.length() - 1);
+        }else{
+            returnVal = returnVal.substring(0, returnVal.length() - 2);
+        }
+        return returnVal;
     }
 }

@@ -8,7 +8,7 @@ enum Status {
     ACCEPTED,
     READY_TO_COOK,
     COOKING,
-    READY;
+    READY
 }
 
 /**
@@ -17,7 +17,7 @@ enum Status {
 public class Order {
     private int ID;
     private Status status;
-    private final Pizza pizza;
+    public Pizza pizza;
 
     double pickUpTime;
     double price;
