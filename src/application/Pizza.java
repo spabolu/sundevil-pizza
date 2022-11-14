@@ -64,7 +64,7 @@ public class Pizza {
             edited = true;
             returnVal += "Olives, ";
         }
-        returnVal=returnVal.trim();
+        returnVal = returnVal.trim();
         if(edited){
             returnVal = returnVal.substring(0, returnVal.length() - 1);
         }else{

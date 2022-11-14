@@ -13,7 +13,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+
 public class PizzaSelectionController implements Initializable {
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
     @FXML
     private CheckBox mushBox;
     @FXML
@@ -23,27 +27,37 @@ public class PizzaSelectionController implements Initializable {
     @FXML
     private CheckBox onionBox;
     @FXML
-    private Button buttonOrder;
-
-    @FXML
     private RadioButton radioPepp;
     @FXML
     private RadioButton radioCheese;
     @FXML
     private RadioButton radioVeg;
     @FXML
+    private Button buttonOrder;
+    @FXML
     private ToggleGroup typeGroup;
 
     @FXML
     private ChoiceBox<String> PickUpTimeChoiceBox;
 
+    Type tempType;
+    Boolean onion, mush, olive, cheese;
+    public void checkCheckBox(){
+        mush = mushBox.isSelected();
+        olive = oliveBox.isSelected();
+        cheese = cheeseBox.isSelected();
+        onion = onionBox.isSelected();
+    }
+
+    double pickUp;
+    int tempID = 0;
+
+
     public void completeOrder(ActionEvent event) throws IOException {
         Button sourceButton = (Button) event.getSource();
+        System.out.println(sourceButton.getText());
+        String tempPickUp = "";
         if(sourceButton == buttonOrder){
-            Type tempType;
-            Boolean mush, olive, onion, cheese;
-            double pickUp;
-            int tempID = 0000000000;
 
             switch(typeGroup.getSelectedToggle().getProperties().toString()){
                 case "radioPepp":
@@ -60,12 +74,8 @@ public class PizzaSelectionController implements Initializable {
                     break;
             }
 
-            mush = mushBox.isSelected();
-            olive = oliveBox.isSelected();
-            cheese = cheeseBox.isSelected();
-            onion = onionBox.isSelected();
+            tempPickUp = PickUpTimeChoiceBox.getValue();
 
-            String tempPickUp = PickUpTimeChoiceBox.getValue();
             switch(tempPickUp){
                 case("11:00 AM"):
                     pickUp = 11.00;
@@ -121,16 +131,23 @@ public class PizzaSelectionController implements Initializable {
                 default:
                     pickUp = 0.0;
                     break;
+            }
 
+            if(radioPepp.isSelected()){
+                tempType = Type.PEPPERONI;
+            }else if(radioCheese.isSelected()){
+                tempType = Type.CHEESE;
+            }else if(radioVeg.isSelected()){
+                tempType = Type.VEGGIE;
+            }else{
+                tempType = Type.NULL;
             }
 
             Pizza tempPizza = new Pizza(tempType, mush, olive, cheese, onion);
-            Main.orderList.add(new Order(tempID, tempPizza, Status.ACCEPTED, pickUp));
+            Order tempOrder = new Order(tempID, tempPizza, Status.ACCEPTED, pickUp);
+            Main.orderList.add(tempOrder);
 
 //Switch Scenes
-            Stage stage;
-            Scene scene;
-            Parent root;
 
             root = FXMLLoader.load(getClass().getResource("StudentTrack.fxml"));
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -142,7 +159,7 @@ public class PizzaSelectionController implements Initializable {
     }
 
 
-    private String[] times = {"11:00 AM", "11:30 AM", "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM",
+    private final String[] times = {"11:00 AM", "11:30 AM", "12:00 PM", "12:30 PM", "1:00 PM", "1:30 PM", "2:00 PM",
             "2:30 PM", "3:00 PM", "3:30 PM", "4:00 PM", "4:30 PM", "5:00 PM", "5:30 PM", "6:00 PM", "6:30 PM",
             "7:00 PM"};
 
