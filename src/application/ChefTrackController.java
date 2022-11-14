@@ -123,6 +123,7 @@ public class ChefTrackController implements Initializable {
     private Scene scene;
     private Parent root;
 
+//  TODO: remove this method once done debugging at the end
     public void switchToStudent(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("StudentTrack.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

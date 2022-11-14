@@ -14,7 +14,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("ChefTrack.fxml")); // change the `.fxml` file here to load your scene for testing purposes
+            Parent root = FXMLLoader.load(getClass().getResource("StudentTrack.fxml")); // change the `.fxml` file here to load your scene for testing purposes
             System.out.println(root);// change the `.fxml` file here to load your scene
             stage.setTitle("SunDevil Pizza Kiosk"); // sets the title of the window
             Scene scene = new Scene(root, 1280, 720); // width: 1280 and height: 720
@@ -42,6 +42,10 @@ public class Main extends Application {
         orderList.add(test2);
         orderList.add(test3);
         orderList.add(test4);
+
+        Order test = new Order(1221201098,new Pizza(Type.CHEESE, true, false, false, false), Status.ACCEPTED, 10.00);
+        orderList.add(test);
+
 
         launch(args);
     }

@@ -17,7 +17,11 @@ enum Status {
 public class Order {
     private int ID;
     private Status status;
+<<<<<<< Updated upstream
     public Pizza pizza;
+=======
+    Pizza pizza;
+>>>>>>> Stashed changes
 
     double pickUpTime;
     double price;
@@ -86,6 +90,12 @@ public class Order {
         this.ID = newID;
     }
 
+    /**
+     * Update status.
+     *
+     * @param status the status
+     * @return the status
+     */
     public static Status updateStatus(Status status){
         switch(status) {
             case NULL:

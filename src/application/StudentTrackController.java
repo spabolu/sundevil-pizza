@@ -39,12 +39,22 @@ public class StudentTrackController implements Initializable {
     private Parent root;
 
 
+<<<<<<< Updated upstream
+=======
+
+
+
+>>>>>>> Stashed changes
     //  TODO: remove this method once done debugging at the end
     public void switchToChef(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("ChefTrack.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+
+//        label_one.setText(Main.orderList.get(0).pizza.toString());
+                label_one.setText("Hello World");
+        progressbar_student_two.setDisable(true);
         stage.show();
     }
 
