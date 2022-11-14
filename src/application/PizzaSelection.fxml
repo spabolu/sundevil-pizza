@@ -19,7 +19,7 @@
    <bottom>
       <AnchorPane prefHeight="720.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
          <children>
-            <RadioButton fx:id="radioPepp" layoutX="140.0" layoutY="372.0" mnemonicParsing="false" text="Pepperoni - $5.50" toggleGroup="$typeGroup" onAction="#checkRadioButton">
+            <RadioButton fx:id="radioPepp" layoutX="140.0" layoutY="372.0" mnemonicParsing="false" text="Pepperoni - $5.50" toggleGroup="$typeGroup" >
                <font>
                   <Font name="Arial Rounded MT Bold" size="18.0" />
                </font>
@@ -27,12 +27,12 @@
                   <ToggleGroup fx:id="typeGroup" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="radioCheese" layoutX="996.0" layoutY="372.0" mnemonicParsing="false" text="Cheese - $5.00" toggleGroup="$typeGroup" onAction="#checkRadioButton">
+            <RadioButton fx:id="radioCheese" layoutX="996.0" layoutY="372.0" mnemonicParsing="false" text="Cheese - $5.00" toggleGroup="$typeGroup" >
                <font>
                   <Font name="Arial Rounded MT Bold" size="18.0" />
                </font>
             </RadioButton>
-            <RadioButton fx:id="radioVeg" layoutX="547.0" layoutY="372.0" mnemonicParsing="false" text="Vegetable - $7.00" toggleGroup="$typeGroup" onAction="#checkRadioButton">
+            <RadioButton fx:id="radioVeg" layoutX="547.0" layoutY="372.0" mnemonicParsing="false" text="Vegetable - $7.00" toggleGroup="$typeGroup" >
                <font>
                   <Font name="Arial Rounded MT Bold" size="18.0" />
                </font>

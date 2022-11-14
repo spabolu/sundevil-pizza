@@ -13,7 +13,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("pizzaSelection.fxml")); // change the `.fxml` file here to load your scene for testing purposes
+            Parent root = FXMLLoader.load(getClass().getResource("firstPage.fxml")); // change the `.fxml` file here to load your scene for testing purposes
             System.out.println(root);// change the `.fxml` file here to load your scene
             stage.setTitle("SunDevil Pizza Kiosk"); // sets the title of the window
             Scene scene = new Scene(root, 1280, 720); // width: 1280 and height: 720
