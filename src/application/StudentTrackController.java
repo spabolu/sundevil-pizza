@@ -24,13 +24,13 @@ public class StudentTrackController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-//        progressbar_student_one.setProgress(); // trying to grab array values from other class to this one to show the progress
-//        progressbar_student_two.setProgress(ChefTrackController.pizzaProgress.get(1).doubleValue());
+
     }
 
     private Stage stage;
     private Scene scene;
     private Parent root;
+
 
     public void switchToChef(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("ChefTrack.fxml"));
@@ -40,9 +40,5 @@ public class StudentTrackController implements Initializable {
         stage.show();
     }
 
-
-//    public static void main(String[] args) {
-//        test();
-//    }
 }
 

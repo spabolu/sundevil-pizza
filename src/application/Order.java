@@ -86,14 +86,7 @@ public class Order {
         this.ID = newID;
     }
 
-
-    /**
-     * Update status.
-     *
-     * @param status the status
-     * @return the status
-     */
-    public Status updateStatus(Status status){
+    public static Status updateStatus(Status status){
         switch(status) {
             case NULL:
                 System.out.println("No order to update");
