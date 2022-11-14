@@ -64,7 +64,7 @@ public class firstPageController implements Initializable {
 
         boolean checkVal = false; //
         boolean containsChar = false; //set to true if ID contains characters
-        sName = studentName.getText();
+        String sName = studentName.getText();
         int studentIdAsNum = 0;
         String studentIDString = studentIDEntered.getText();
 
@@ -119,7 +119,7 @@ public class firstPageController implements Initializable {
 
         boolean checkVal = false; //
         boolean containsChar = false; //set to true if ID contains characters
-        cName = chefName.getText();
+        String cName = chefName.getText();
         int chefIdAsNum = 0;
         String chefIDString = chefIDEntered.getText();
 
